@@ -1,13 +1,11 @@
 package com.example.tddstudy2.domain.membership;
 
-import com.example.tddstudy2.domain.membership.MembershipRepository;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
-import org.springframework.test.annotation.Rollback;
 
-import static org.assertj.core.api.Assertions.*;
+import static org.assertj.core.api.Assertions.assertThat;
 
 @DataJpaTest //JPA Repository들에 대한 빈들을 등록하여 단위 테스트의 작성을 용이하게 함(내부적으로 @ExtentdWith(SpringExtension.class), @Transactional가지고 있음)
 public class MembershipRepositoryTest {

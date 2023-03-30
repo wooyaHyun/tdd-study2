@@ -1,10 +1,7 @@
 package com.example.tddstudy2.domain.membership;
 
 import com.example.tddstudy2.domain.BaseEntity;
-import lombok.AccessLevel;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import org.hibernate.annotations.ColumnDefault;
 
 import javax.persistence.*;
@@ -12,6 +9,8 @@ import javax.persistence.*;
 @Entity
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @Getter
+@Builder
+@AllArgsConstructor
 public class Membership extends BaseEntity {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -27,12 +26,12 @@ public class Membership extends BaseEntity {
     @ColumnDefault("0")
     private int point;
 
-    @Builder
+/*    @Builder
     public Membership(String userId, MembershipType membershipType, int point){
         this.userId = userId;
         this.membershipType = membershipType;
         this.point = point;
-    }
+    }*/
 
 
 
