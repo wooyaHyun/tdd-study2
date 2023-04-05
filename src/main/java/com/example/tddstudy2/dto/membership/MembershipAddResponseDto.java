@@ -9,7 +9,7 @@ import lombok.RequiredArgsConstructor;
 @Getter
 @RequiredArgsConstructor
 @Builder
-public class MembershipResponseDto {
+public class MembershipAddResponseDto {
 
     private final Long id;
     private final MembershipType membershipType;
